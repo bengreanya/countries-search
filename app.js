@@ -20,10 +20,11 @@ window.addEventListener('load', async () => {
     // call findCountries function with no arguments to fetch all countries (Slice A);
     findCountries();
     // Slice B: call asynchronous getContinents fetch function and set to response variable
-    const respon
+    const continentsResponse = await getContinents();
     // Slice B: set the continents state to the response.data
-    
+    continents = continentsResponse.data;
     // Slice B: call displayContinentOptions function;
+    displayContinentOptions();
 });
 
 async function findCountries(continent) {
